@@ -11,6 +11,7 @@ const App = () => {
   return (
     <div className="bg-primary w-full overflow-hidden">
       <BrowserRouter>
+        {/* Navbar */}
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <Navbar />

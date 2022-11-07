@@ -47,18 +47,15 @@ const ExchangeDetail = () => {
         className={` ${styles.paragraph} mt-6 pb-6 [&>a]:text-blue-600 [&>a]:underline`}
         dangerouslySetInnerHTML={{ __html: response.description }}
       />
-
       <p>
         {' '}
         <span className="font-bold">Country:</span>{' '}
         {response.country ? response.country : `N/A`}
       </p>
-
       <p>
         <span className="font-bold">Year of Establishment:</span>{' '}
         {response.year_established ? response.year_established : `N/A`}
       </p>
-
       <div className="flex mt-6 gap-4">
         {/* 
           TODO: handle link error, 

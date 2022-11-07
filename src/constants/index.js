@@ -4,7 +4,7 @@ export const navLinks = [
     title: 'Home',
   },
   {
-    id: 'exchanges',
+    id: 'exchangesList',
     title: 'List of Exchanges',
   },
 ];

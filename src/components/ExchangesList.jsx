@@ -13,7 +13,7 @@ const ExchangesList = () => {
   }
 
   return (
-    <section id="exchnageList" className="">
+    <section id="exchangesList" className="">
       {response &&
         response.map((item) => <ExchangeItem key={item.id} exchange={item} />)}
     </section>

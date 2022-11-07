@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ExchangeItem = ({ exchange }) => {
+const ExchangeListItem = ({ exchange }) => {
   return (
     <Link to={`/exchange/${exchange.id}`}>
       <div className="text-white grid sm:grid-cols-4 p-5 sm:p-6  border-gray-200 border-b hover:bg-gray-100 hover:text-black">
@@ -28,4 +28,4 @@ const ExchangeItem = ({ exchange }) => {
   );
 };
 
-export default ExchangeItem;
+export default ExchangeListItem;

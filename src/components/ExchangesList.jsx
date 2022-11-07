@@ -1,4 +1,4 @@
-import ExchangeItem from './ExchangeItem';
+import ExchangeListItem from './ExchangeListItem';
 import useAxios from '../hooks/useAxios';
 
 const ExchangesList = () => {
@@ -15,7 +15,9 @@ const ExchangesList = () => {
   return (
     <section id="exchangesList" className="">
       {response &&
-        response.map((item) => <ExchangeItem key={item.id} exchange={item} />)}
+        response.map((item) => (
+          <ExchangeListItem key={item.id} exchange={item} />
+        ))}
     </section>
   );
 };

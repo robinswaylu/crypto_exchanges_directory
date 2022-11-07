@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import Hero from './Hero';
 import ExchangesList from './ExchangesList';
-import Exchange from './ExchangeItem';
+import ExchangeListItem from './ExchangeListItem';
 
-export { Navbar, Hero, ExchangesList, Exchange };
+export { Navbar, Hero, ExchangesList, ExchangeListItem };

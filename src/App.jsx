@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import ExchangeDetail from './pages/ExchangeDetail';
+import Exchange from './pages/Exchange';
 
 import { Navbar } from './components';
 import styles from './styles';
@@ -20,7 +20,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/exchange/:id" element={<ExchangeDetail />} />
+          <Route path="/exchange/:id" element={<Exchange />} />
         </Routes>
       </BrowserRouter>
     </div>

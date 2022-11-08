@@ -38,7 +38,7 @@ const ExchangeDetail = () => {
   }
 
   return (
-    <section className={`flex flex-col ${styles.padding}`}>
+    <section className={`flex flex-col ${styles.padding} text-white`}>
       <BackToHomeArrow />
       <div className="flex flex-col sm:flex-row items-center pt-36 justify-between ">
         <div className="flex gap-4 items-center">

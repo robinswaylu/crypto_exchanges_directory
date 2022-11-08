@@ -3,5 +3,13 @@ import Hero from './Hero';
 import ExchangesList from './ExchangesList';
 import ExchangeListItem from './ExchangeListItem';
 import ExchangeDetail from './ExchangeDetail';
+import Loading from './Loading';
 
-export { Navbar, Hero, ExchangesList, ExchangeListItem, ExchangeDetail };
+export {
+  Navbar,
+  Hero,
+  ExchangesList,
+  ExchangeListItem,
+  ExchangeDetail,
+  Loading,
+};

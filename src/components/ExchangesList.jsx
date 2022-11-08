@@ -1,14 +1,24 @@
 import ExchangeListItem from './ExchangeListItem';
 import useAxios from '../hooks/useAxios';
+import Loading from './Loading';
 
 const ExchangesList = () => {
   const { response, loading } = useAxios('exchanges?per_page=10&page=1');
 
   if (loading) {
     return (
-      <div className="wrapper-container mt-8">
-        <p>Loading...</p>
-      </div>
+      <section id="exchangesList">
+        <Loading className="h-8 w-32" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2 mb-10" />
+      </section>
     );
   }
 

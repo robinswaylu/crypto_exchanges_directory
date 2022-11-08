@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className={`bg-primary ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
-        {/* Start Homepage hero section */}
+        {/* Start Homepage Hero section */}
         <Hero />
         {/* Start Exchanges List section */}
         <ExchangesList />

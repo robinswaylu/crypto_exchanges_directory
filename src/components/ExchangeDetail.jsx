@@ -1,13 +1,30 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import useAxios from '../hooks/useAxios';
-import { arrow, facebook, twitter } from '../assets';
+import { facebook, twitter } from '../assets';
+import Loading from './Loading';
+import BackToHomeArrow from './BackToHomeArrow';
 import styles from '../styles';
 
 const ExchangeDetail = () => {
   const { id } = useParams();
-  const { response } = useAxios(`/exchanges/${id}`);
+  const { response, loading } = useAxios(`/exchanges/${id}`);
 
-  /* TODO: handle loading feedback */
+  if (loading) {
+    return (
+      <section className="text-white flex flex-col sm:pt-24 pt-6 sm:pb-64 pb-40 xl:px-0 sm:px-16 px-6 ">
+        <Loading className="h-8 w-32" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2" />
+        <Loading className="h-8 w-full mt-2 mb-10" />
+      </section>
+    );
+  }
 
   if (!response) {
     return (
@@ -19,18 +36,7 @@ const ExchangeDetail = () => {
 
   return (
     <section className="text-white flex flex-col sm:pt-24 pt-6 sm:pb-64 pb-40 xl:px-0 sm:px-16 px-6 ">
-      <Link className="flex items-center" to="/">
-        {/* 
-          TODO: Hover styling for back arrow 
-        */}
-        <img
-          role="presentation"
-          src={arrow}
-          alt={`${response.name} twitter page`}
-          className="w-[50px] h-[50px] cursor-pointer"
-        />
-        <p>Back to home</p>
-      </Link>
+      <BackToHomeArrow />
       <div className="flex flex-col sm:flex-row items-center pt-36 justify-between ">
         <div className="flex gap-4 items-center">
           <img src={response.image} alt={response.name} />
@@ -69,7 +75,7 @@ const ExchangeDetail = () => {
             role="presentation"
             src={twitter}
             alt={`${response.name} twitter page`}
-            className="w-[30px] h-[30px] object-contain cursor-pointer"
+            className="w-[30px] h-[30px] cursor-pointer hover:animate-pulse"
             onClick={() =>
               window.open(`https://twitter.com/${response.twitter_handle}`)
             }
@@ -82,7 +88,7 @@ const ExchangeDetail = () => {
             role="presentation"
             src={facebook}
             alt={`${response.name} facebook page`}
-            className="w-[30px] h-[30px] object-contain cursor-pointer"
+            className="w-[30px] h-[30px] cursor-pointer hover:animate-pulse"
             onClick={() => window.open(response.facebook_url)}
           />
         ) : null}

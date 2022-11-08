@@ -2,6 +2,7 @@
 
 crypto_exchanges_directory is a application that displays the top 10 crypto exchanges via [Coingecko API](https://www.coingecko.com/en/api/documentation).  
 
+[DEMO](https://crypto-exchanges-directory.vercel.app/)
 
 ![Project Preview](https://github.com/robinswaylu/crypto_exchanges_directory/blob/main/src/assets/screen.png?raw=true)
 

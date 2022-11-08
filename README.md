@@ -23,11 +23,11 @@ npm run dev
 
 Open [http://127.0.0.1:5173](http://127.0.0.1:5173) to view the application in the browser.
  
-### Tech
+## Tech used
 
-Vite: https://vitejs.dev/
+Vite: https://vitejs.dev/ 
 
-ESLint: https://eslint.org/docs/latest/user-guide/getting-started
+ESLint: https://eslint.org/docs/latest/user-guide/getting-started 
 
 Prettier: https://prettier.io/docs/en/index.html 
 

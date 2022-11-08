@@ -29,7 +29,7 @@ const ExchangeDetail = () => {
   if (!response) {
     return (
       <section className={`${styles.section} text-white`}>
-        <p>
+        <p className="errorMessage">
           Error: exchange information not available at the moment. Please try
           again later.
         </p>
@@ -43,10 +43,12 @@ const ExchangeDetail = () => {
       <div className="flex flex-col sm:flex-row items-center pt-36 justify-between ">
         <div className="flex gap-4 items-center">
           <img src={response.image} alt={response.name} />
-          <h1 className="text-white text-3xl font-bold">{response.name}</h1>
+          <h1 className="text-white text-3xl font-bold exchangeName">
+            {response.name}
+          </h1>
         </div>
         <div className="flex flex-col mt-6 sm:mt-0">
-          <span className="text-center text-3xl font-bold text-secondary">
+          <span className="text-center text-3xl font-bold text-secondary trustScoreRank">
             {response.trust_score_rank}
           </span>
           <p className="font-semibold">Trust score rank </p>

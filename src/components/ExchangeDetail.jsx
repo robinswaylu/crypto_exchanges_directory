@@ -43,12 +43,15 @@ const ExchangeDetail = () => {
           <p className=" font-semibold">Trust score rank </p>
         </div>
       </div>
+
+      {/* eslint-disable */}
       <p
         className={` ${styles.paragraph} mt-6 pb-6 [&>a]:text-blue-600 [&>a]:underline`}
         dangerouslySetInnerHTML={{ __html: response.description }}
       />
+      {/* eslint-enable */}
+
       <p>
-        {' '}
         <span className="font-bold">Country:</span>{' '}
         {response.country ? response.country : `N/A`}
       </p>

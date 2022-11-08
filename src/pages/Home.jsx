@@ -3,7 +3,7 @@ import { Hero, ExchangesList } from '../components';
 
 const Home = () => {
   return (
-    <div className={`bg-primary ${styles.flexStart}`}>
+    <div className={`bg-primary ${styles.flexStart} mb-16`}>
       <div className={`${styles.boxWidth}`}>
         {/* Start Homepage Hero section */}
         <Hero />

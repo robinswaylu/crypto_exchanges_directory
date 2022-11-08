@@ -1,10 +1,8 @@
 import React from 'react';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Exchange from './pages/Exchange';
-
-import { Navbar } from './components';
+import { Navbar, Footer } from './components';
 import styles from './styles';
 
 const App = () => {
@@ -22,6 +20,12 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/exchange/:id" element={<Exchange />} />
         </Routes>
+
+        <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+          <div className={`${styles.boxWidth}`}>
+            <Footer />
+          </div>
+        </div>
       </BrowserRouter>
     </div>
   );

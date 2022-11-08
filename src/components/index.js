@@ -4,6 +4,7 @@ import ExchangesList from './ExchangesList';
 import ExchangeListItem from './ExchangeListItem';
 import ExchangeDetail from './ExchangeDetail';
 import Loading from './Loading';
+import Footer from './Footer';
 
 export {
   Navbar,
@@ -12,4 +13,5 @@ export {
   ExchangeListItem,
   ExchangeDetail,
   Loading,
+  Footer,
 };

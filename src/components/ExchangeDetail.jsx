@@ -11,7 +11,7 @@ const ExchangeDetail = () => {
 
   if (loading) {
     return (
-      <section className="text-white flex flex-col sm:pt-24 pt-6 sm:pb-64 pb-40 xl:px-0 sm:px-16 px-6 ">
+      <section className={`${styles.section}`}>
         <Loading className="h-8 w-32" />
         <Loading className="h-8 w-full mt-2" />
         <Loading className="h-8 w-full mt-2" />
@@ -28,14 +28,17 @@ const ExchangeDetail = () => {
 
   if (!response) {
     return (
-      <div className="wrapper-container mt-8">
-        <p>Error: exchange information not available</p>
-      </div>
+      <section className={`${styles.section} text-white`}>
+        <p>
+          Error: exchange information not available at the moment. Please try
+          again later.
+        </p>
+      </section>
     );
   }
 
   return (
-    <section className="text-white flex flex-col sm:pt-24 pt-6 sm:pb-64 pb-40 xl:px-0 sm:px-16 px-6 ">
+    <section className={`flex flex-col ${styles.padding}`}>
       <BackToHomeArrow />
       <div className="flex flex-col sm:flex-row items-center pt-36 justify-between ">
         <div className="flex gap-4 items-center">
@@ -46,7 +49,7 @@ const ExchangeDetail = () => {
           <span className="text-center text-3xl font-bold text-secondary">
             {response.trust_score_rank}
           </span>
-          <p className=" font-semibold">Trust score rank </p>
+          <p className="font-semibold">Trust score rank </p>
         </div>
       </div>
 

@@ -7,7 +7,7 @@ import styles from './styles';
 
 const App = () => {
   return (
-    <div className="bg-primary w-full overflow-hidden">
+    <div className="bg-primary bg-black-gradient w-full overflow-hidden">
       <BrowserRouter>
         {/* Start Navbar div */}
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/exchange/:id" element={<Exchange />} />
         </Routes>
 
-        <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <Footer />
           </div>

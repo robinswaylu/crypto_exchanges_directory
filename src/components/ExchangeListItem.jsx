@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const ExchangeListItem = ({ exchange }) => {
   return (
-    <Link to={`/exchange/${exchange.id}`}>
+    <Link to={`/exchange/${exchange.id}`} className="exchangeLink">
       <div className="text-white grid sm:grid-cols-4 p-5 sm:p-6  border-gray-200 border-b hover:bg-gray-100 hover:text-black">
         <div className="flex items-center gap-2 w-full">
           <img className="w-6" src={exchange.image} alt={exchange.name} />

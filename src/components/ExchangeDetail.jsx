@@ -54,10 +54,25 @@ const ExchangeDetail = () => {
       </div>
 
       {/* eslint-disable */}
-      <p
-        className={` ${styles.paragraph} mt-6 pb-6 [&>a]:text-blue-600 [&>a]:underline`}
-        dangerouslySetInnerHTML={{ __html: response.description }}
-      />
+      {response.description ? (
+        <p
+          className={` ${styles.paragraph} mt-6 pb-6 [&>a]:text-secondary [&>a]:underline`}
+          dangerouslySetInnerHTML={{ __html: response.description }}
+        />
+      ) : (
+        <p className={` ${styles.paragraph}  mt-6 pb-6`}>
+          {response.name} does not have description at the moment. Please visit
+          their offical website for more information:{' '}
+          <a
+            className="text-secondary underline"
+            href={response.url}
+            target="_blank"
+          >
+            {response.url}
+          </a>
+        </p>
+      )}
+
       {/* eslint-enable */}
 
       <p>

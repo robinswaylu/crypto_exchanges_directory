@@ -6,6 +6,14 @@ export const navLinks = [
     title: 'Home',
   },
 ];
+export const heroMessageH1 = {
+  id: 'h1',
+  copy: 'Welcome to the Crypto Exchange Directory',
+};
+export const heroMessageP = {
+  id: 'p',
+  copy: 'Top 10 Crypto Exchanges',
+};
 export const socialMedia = [
   {
     id: 'social-media-1',
